@@ -1,0 +1,153 @@
+
+.footer .btn-box a, .footer .home-sci a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* Size of the icons */
+    height: 40px;  /* Size of the icons */
+    border-radius: 50%;  /* Makes the icons round */
+    background-color: #00abf0;  /* Blue background for the icons */
+    color: var(--bg-color);  /* Text color inside the icons */
+    font-size: 20px;  /* Icon font size */
+    border: none;  /* No border for the icons */
+    text-decoration: none;  /* No underline for links */
+}
+
+.footer .btn-box a {
+    width: auto;  /* Auto width for the resume button */
+    padding: 10px 20px;  /* Padding inside the resume button */
+    border-radius: 20px;  /* Rounded corners for the button */
+    background: transparent;  /* Transparent background for the button */
+    border: 2px solid var(--main-color);  /* Blue border for the button */
+    font-size: 16px;  /* Font size for the button text */
+    color: var(--main-color);  /* Blue text color for the button */
+}
+
+.footer .btn-box a:hover, .footer .home-sci a:hover {
+    background-color: var(--main-color);  /* Blue background on hover */
+    color: var(--bg-color);  /* White text on hover */
+}
+
+.footer p {
+    flex-grow: 1;  /* Allows the copyright text to take available space */
+    text-align: center;  /* Centers the copyright text */
+    margin: 0 20px;  /* Margin around the text */
+}
+
+.footer a {
+    text-decoration: none;  /* Ensures links are not underlined */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;  /* Stacks the elements vertically on small screens */
+        align-items: center;  /* Aligns items centrally */
+    }
+    .footer .btn-box, .footer .home-sci {
+        justify-content: center;  /* Centers the buttons and icons horizontally */
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;  
+}
+
+
+
+/* Modal Styles */
+.modal-content {
+    background:transparent;
+    color: var(--text-color);
+    padding: 2rem;
+    width: 70%;
+    max-width: 600px;
+    max-height: 80vh; /* Prevents the modal from taking full height */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+    position: fixed; /* Ensures it stays fixed in the viewport */
+    inset: 50% auto auto 50%; /* Centers it */
+    transform: translate(-50%, -50%); /* Adjusts for true centering */
+    
+    overflow-y: auto; /* Enables scrolling when needed */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+
+/* Close Button */
+.close {
+    color: var(--main-color);
+    font-size: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff4d4d;
+}
+
+/* Popup Header */
+.modal-content h2 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+/* Popup Text */
+.modal-content p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Popup List */
+.modal-content ul {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.modal-content ul li {
+    list-style: none;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.modal-content ul li::before {
+    content: "✔";
+    color: var(--main-color);
+    font-size: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

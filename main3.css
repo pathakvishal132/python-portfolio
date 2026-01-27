@@ -1,0 +1,200 @@
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    .header {
+        padding: 2rem 4%;
+    }
+
+    section {
+        padding: 10rem 4% 2rem;
+    }
+
+    .home {
+        padding: 0 4%;
+    }
+
+    .footer {
+        padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 884px) {
+    html {
+        overflow-x: hidden;
+    }
+    
+    .portfolio-layer h4 {
+        font-size: 2rem;
+    }
+
+    .portfolio-layer p {
+        font-size: 1rem;
+    }
+
+    .portfolio-layer a {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        width: 100vw;
+        overflow-x: hidden;
+    } 
+
+    .header {
+        background: var(--bg-color);
+        width: 100vw;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--bg-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        transition: .30s ease;
+        transition-delay: .30s;
+    }
+
+    .navbar.active {
+        left: 0;
+        transition-delay: .30s;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        padding-top: 10rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        max-height: 200vh;
+    }
+
+    .home-content h1, .home-content p {
+        text-align: center;
+    }
+
+    .home-content .text-animate {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .home .home-info {
+        order: 2;
+        height: 45rem;
+    }
+
+    .home-sci {
+        width: 25rem;
+        position: static;
+        margin: 5rem auto;
+    }
+ 
+    .home .home-info .home-content .btn-box {
+        margin: 0 auto;
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .about .about-details {
+        width: 90%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-layer h4 {
+        font-size: 2.25rem;
+    }
+
+    .portfolio-layer p {
+        font-size: 1.5rem;
+    }
+
+    .portfolio-layer a {
+        width: 5rem;
+        height: 5rem;
+    }
+} 
+
+@media (max-width: 654px) {
+    html {
+        font-size: 50%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-layer p {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .portfolio-layer a {
+        margin-top: 3.5rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .portfolio-layer a i {
+        font-size: 3rem;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 9%;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.footer .btn-box, .footer .home-sci {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* Spacing between icons and the button */
+}
