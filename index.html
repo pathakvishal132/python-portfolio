@@ -1,490 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himanshu Pathak Portfolio</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="main2.css">
-    <link rel="stylesheet" href="main3.css">
-    <link rel="stylesheet" href="main4.css">
+    <meta name="description"
+        content="Himanshu Pathak — Python Developer specializing in Django, FastAPI, REST APIs, and full-stack development. Building scalable systems with Python and Java at CYFIRMA.">
+    <meta name="keywords"
+        content="Himanshu Pathak, Python Developer, Django, FastAPI, REST APIs, Full Stack Developer, Backend Developer, Java, Spring Boot, PostgreSQL">
+    <meta name="author" content="Himanshu Pathak">
 
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Himanshu Pathak — Python Developer">
+    <meta property="og:description"
+        content="Python specialist building scalable backend systems. Django, FastAPI, REST APIs, Spring Boot, System Design.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/Mypic.png">
+
+    <title>Himanshu Pathak — Python Developer | Backend Specialist</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Himanshu Pathak",
+            "jobTitle": "Python Developer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "CYFIRMA"
+            },
+            "alumniOf": [{
+                    "@type": "EducationalOrganization",
+                    "name": "Shri Mata Vaishno Devi University"
+                },
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "IIT Madras"
+                }
+            ],
+            "url": "https://github.com/pathakvishal132",
+            "sameAs": [
+                "https://www.linkedin.com/in/himanshu-pathak-997720201/",
+                "https://github.com/pathakvishal132/",
+                "https://leetcode.com/u/pathakvishal132/"
+            ],
+            "knowsAbout": ["Python", "Django", "FastAPI", "REST APIs", "PostgreSQL", "Redis", "System Design", "Java",
+                "Spring Boot", "Celery", "Docker"
+            ]
+        }
+    </script>
 </head>
 
 <body>
-    <!-- header design -->
-    <header class="header top">
-        <a href="#" class="logo">Port<span>folio.</span></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About me</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#tech-stack">Tech Stack</a>
-            <a href="#portfolio">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <!--a href="#contact">Resume</a-->
-        </nav>
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="#home" class="logo">Himanshu<span>.</span></a>
+            <nav class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#tech-stack">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#why-hire">Why Me</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class='bx bx-moon' id="theme-icon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <i class='bx bx-menu'></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- home section design -->
-    <section class="home" id="home">
-        <div class="home-info">
-            <div class="home-content left">
-                <h1>Hi, <br> I'm <span>Himanshu Pathak</span></h1>
-                <h3 class="text-animate">I'm a <span class="multiple-text"></span></h3>
-
-                <p>
-                    Software Developer at Cyfirma | B.Tech in Computer Science (SMVDU) | BS in Programming (IIT Madras).
-                    Experienced in building scalable full-stack applications with hands-on roles at IBM and SMVDU.
-                </p>
-
-                <p>
-                    Skilled in Data Structures & Algorithms and proficient in Java, Python, Django,
-                    Angular, and REST API development.
-                </p>
+    <main>
+        <!-- ═══════ HERO ═══════ -->
+        <section class="hero section" id="home">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Himanshu Pathak</span>
+                    </h1>
+                    <p class="hero-headline">
+                        Python Developer · Django Specialist · <span class="typed-text" id="typed-output"></span>
+                    </p>
+                    <p class="hero-description">
+                        Backend Developer at CYFIRMA building threat intelligence platforms. Expert in Python with
+                        strong Django and FastAPI skills. Also work with Java/Spring Boot for enterprise systems. Built
+                        REST APIs serving 50K+ daily requests and automated workflows that saved 90% manual effort.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="mailto:pathakvishal132@gmail.com" class="btn btn-outline">
+                            <i class='bx bx-envelope'></i> Let's Talk
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/himanshu-pathak-997720201/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/pathakvishal132/" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://leetcode.com/u/pathakvishal132/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LeetCode">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                alt="LeetCode" width="20" height="20" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/Mypic.png" alt="Himanshu Pathak — Python Developer" width="340" height="340"
+                        loading="eager">
+                </div>
             </div>
+        </section>
 
+        <!-- ═══════ ABOUT ═══════ -->
+        <section class="section section-alt" id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Building Python-Powered <span class="gradient-text">Backends</span></h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="./assets/IIT_Madras_Logo.svg.png" alt="IIT Madras" width="280" height="280"
+                            loading="lazy">
+                        <div class="orbit-ring"></div>
+                    </div>
+                    <div class="about-text reveal">
+                        <h3><span>Python</span> Backend Developer</h3>
+                        <p>
+                            I'm a Python developer at CYFIRMA specializing in building scalable backend systems with
+                            <strong>Django and FastAPI</strong>. I have prior experience at IBM working with
+                            <strong>Java/Spring Boot</strong> for enterprise solutions.
+                        </p>
+                        <p>
+                            I architected high-performance Django APIs processing millions of records, implemented Redis
+                            caching strategies, and built asynchronous task pipelines with Celery. On the Java side,
+                            I've delivered Spring Boot microservices with PostgreSQL integration.
+                        </p>
+                        <p>
+                            I also built <strong>InterviewPrepHub</strong> — a Django-powered AI interview preparation
+                            platform with Angular frontend, serving users across 5 engineering domains.
+                        </p>
+                        <div class="about-stats">
+                            <article class="stat-card glass-card">
+                                <div class="stat-number">2000+</div>
+                                <div class="stat-label">DSA Problems Solved</div>
+                            </article>
+                            <article class="stat-card glass-card">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">API Requests/Day</div>
+                            </article>
+                            <article class="stat-card glass-card">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Years Experience</div>
+                            </article>
+                        </div>
+                        <div class="about-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Celery</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS S3</span>
+                            <span class="skill-tag">Angular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <div class="home-sci">
-                <a href="https://www.linkedin.com/in/himanshu-pathak-997720201/" target="_blank"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/pathakvishal132/" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://leetcode.com/u/pathakvishal132/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-                        alt="LeetCode" width="24" height="24">
+        <!-- ═══════ EXPERIENCE ═══════ -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Experience</span>
+                    <h2 class="section-title">Where I've <span class="gradient-text">Made Impact</span></h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item glass-card reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Python Developer</h3>
+                                <p class="timeline-company">CYFIRMA — Cybersecurity Threat Intelligence</p>
+                            </div>
+                            <span class="timeline-date">
+                                <i class='bx bx-calendar'></i> Feb 2024 — Present
+                            </span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Designed and optimized scalable REST APIs using <strong>Django and FastAPI</strong>,
+                                improving backend performance and maintainability</li>
+                            <li>Built data-heavy analytics and dashboard APIs with advanced time-based aggregations,
+                                conditional filters, and role-based access control</li>
+                            <li>Implemented high-performance backend services integrating <strong>Redis
+                                    caching</strong>, <strong>Celery-based asynchronous task processing</strong>, and
+                                <strong>PostgreSQL</strong></li>
+                            <li>Integrated <strong>AWS S3</strong> for secure file uploads supporting high-volume data
+                                ingestion pipelines</li>
+                            <li>Developed Python automation pipelines using NLP for threat detection, reducing manual
+                                moderation by <span class="metric-badge">↓ 90%</span></li>
+                            <li>Built computer vision pipelines using OpenCV for impersonated profile detection, cutting
+                                investigation time by <span class="metric-badge">↓ 60%</span></li>
+                            <li>Refactored <strong>40+ Angular components</strong> consuming Django REST APIs, improving
+                                rendering performance</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item glass-card reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Software Development Intern</h3>
+                                <p class="timeline-company">IBM — Enterprise Solutions</p>
+                            </div>
+                            <span class="timeline-date">
+                                <i class='bx bx-calendar'></i> Sep 2022 — Nov 2022
+                            </span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Engineered optimized database schemas in <strong>Java/Spring Boot</strong>, improving
+                                data retrieval speed by <span class="metric-badge">↑ 40%</span></li>
+                            <li>Implemented secure user and admin authentication integrated with a real-time payment
+                                gateway, reducing processing errors by <span class="metric-badge">↓ 60%</span></li>
+                            <li>Collaborated with cross-functional teams to debug and refine backend workflows,
+                                achieving <span class="metric-badge">↑ 25%</span> improvement in system stability</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ EDUCATION ═══════ -->
+        <section class="section section-alt" id="education">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Education</span>
+                    <h2 class="section-title">Academic <span class="gradient-text">Foundation</span></h2>
+                </div>
+                <div class="education-grid">
+                    <article class="edu-card glass-card reveal">
+                        <div class="edu-year">
+                            <i class='bx bx-calendar'></i> 2020 — 2024
+                        </div>
+                        <h3>B.Tech in Computer Science & Engineering</h3>
+                        <p><strong>Shri Mata Vaishno Devi University</strong></p>
+                        <p>Relevant Courses: Data Structures & Algorithms, DBMS, Operating Systems, Machine Learning,
+                            AI, Software Engineering</p>
+                    </article>
+                    <article class="edu-card glass-card reveal">
+                        <div class="edu-year">
+                            <i class='bx bx-calendar'></i> 2022 — 2024
+                        </div>
+                        <h3>BS in Programming</h3>
+                        <p><strong>IIT Madras</strong></p>
+                        <p>Relevant Courses: Python, Java, Web Development, SQL, Object-Oriented Programming, Django</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ TECH STACK ═══════ -->
+        <section class="section" id="tech-stack">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Tech Stack</span>
+                    <h2 class="section-title">Tools I <span class="gradient-text">Work With</span></h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-card glass-card reveal">
+                        <h3>Languages</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Java</span>
+                            <span class="tech-item">TypeScript</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">HTML / CSS</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <h3>Python Frameworks</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Django</span>
+                            <span class="tech-item">Django REST</span>
+                            <span class="tech-item">FastAPI</span>
+                            <span class="tech-item">Celery</span>
+                            <span class="tech-item">Flask</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <h3>Databases & Cache</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">MySQL</span>
+                            <span class="tech-item">MongoDB</span>
+                            <span class="tech-item">Redis</span>
+                            <span class="tech-item">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="tech-card glass-card reveal">
+                        <h3>Tools & Cloud</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Git / GitHub</span>
+                            <span class="tech-item">AWS (S3)</span>
+                            <span class="tech-item">Docker</span>
+                            <span class="tech-item">Jira</span>
+                            <span class="tech-item">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ PROJECTS ═══════ -->
+        <section class="section section-alt" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Projects</span>
+                    <h2 class="section-title">What I've <span class="gradient-text">Built</span></h2>
+                    <p class="section-subtitle">End-to-end projects with real-world impact, from architecture to
+                        deployment.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: InterviewPrepHub -->
+                    <article class="project-card glass-card reveal">
+                        <div class="project-image">
+                            <img src="./assets/logo.jpg" alt="InterviewPrepHub — AI-powered interview platform"
+                                width="600" height="200" loading="lazy">
+                            <div class="project-overlay">
+                                <span class="timeline-date">Live Project</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">InterviewPrepHub</h3>
+                            <div class="project-format">
+                                <div class="format-item">
+                                    <span class="format-label">Problem</span>
+                                    <span class="format-value">Interview prep is fragmented — no unified platform for
+                                        multi-domain, AI-powered practice</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format-label">Solution</span>
+                                    <span class="format-value">Built a full-stack platform with Django backend,
+                                        AI-generated questions, voice input support</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format-label">Impact</span>
+                                    <span class="format-value">Django REST API · PostgreSQL · Redis caching · Celery
+                                        tasks · 5 engineering domains</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Django</span>
+                                <span>Angular</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis</span>
+                                <span>Celery</span>
+                                <span>OpenAI API</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/pathakvishal132/InterviewPrepHub-Backend" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> Backend
+                                </a>
+                                <a href="https://github.com/pathakvishal132/InterviewPrepHub-Frontend" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> Frontend
+                                </a>
+                                <a href="https://interview-prep-hub-frontend-gamma.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bx-link-external'></i> Live Demo
+                                </a>
+                                <button class="project-expand-btn" onclick="toggleProjectDetails('project1-details')">
+                                    <i class='bx bx-info-circle'></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-details" id="project1-details">
+                            <div class="project-details-inner">
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Django REST Framework backend with JWT authentication</li>
+                                    <li>AI-generated questions using OpenAI API integration</li>
+                                    <li>Celery async tasks for AI response processing</li>
+                                    <li>Redis caching for frequently accessed questions</li>
+                                    <li>PostgreSQL for structured user and question data</li>
+                                </ul>
+                                <h4>Challenges Faced</h4>
+                                <p>Designing efficient async task queues with Celery while maintaining data consistency
+                                    between Redis cache and PostgreSQL.</p>
+                                <h4>What I Learned</h4>
+                                <p>Deepened Django expertise, async task processing, Redis caching strategies, and
+                                    building scalable multi-tenant applications.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Grocery Management Store -->
+                    <article class="project-card glass-card reveal">
+                        <div class="project-image">
+                            <img src="./assets/GMS.webp" alt="Grocery Management Store" width="600" height="200"
+                                loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Grocery Management Store</h3>
+                            <div class="project-format">
+                                <div class="format-item">
+                                    <span class="format-label">Problem</span>
+                                    <span class="format-value">Small retailers lacked an affordable platform for
+                                        inventory management and customer ordering</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format-label">Solution</span>
+                                    <span class="format-value">Built a full-stack e-commerce platform with Flask,
+                                        role-based access, and real-time inventory</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format-label">Impact</span>
+                                    <span class="format-value">Flask backend · Redis caching · Celery background jobs ·
+                                        Real-time inventory tracking</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span>Flask</span>
+                                <span>Vue.js</span>
+                                <span>SQLite</span>
+                                <span>Redis</span>
+                                <span>Celery</span>
+                            </div>
+                            <div class="project-links-row">
+                                <a href="https://github.com/pathakvishal132/Mad2ProjectIITM" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> Source Code
+                                </a>
+                                <button class="project-expand-btn" onclick="toggleProjectDetails('project2-details')">
+                                    <i class='bx bx-info-circle'></i> Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-details" id="project2-details">
+                            <div class="project-details-inner">
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Flask REST API with role-based authentication</li>
+                                    <li>Category and product CRUD with real-time stock updates</li>
+                                    <li>Background job processing with Celery for report generation</li>
+                                    <li>Redis caching for improved response times</li>
+                                </ul>
+                                <h4>Challenges Faced</h4>
+                                <p>Designing an efficient caching strategy with Redis while maintaining data consistency
+                                    between cache and SQLite.</p>
+                                <h4>What I Learned</h4>
+                                <p>Gained hands-on experience with Flask, task queues, caching strategies, and REST API
+                                    best practices.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ ACHIEVEMENTS ═══════ -->
+        <section class="section" id="achievements">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Achievements</span>
+                    <h2 class="section-title">Milestones & <span class="gradient-text">Recognition</span></h2>
+                </div>
+                <div class="achievements-grid">
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🥇</div>
+                        <div class="achievement-content">
+                            <h4>Rank 1 — IIT Madras Python CodeChef Contest</h4>
+                            <p>Secured the top position in the Python programming contest at IIT Madras.</p>
+                            <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/iitm.png"
+                                target="_blank" rel="noopener noreferrer">View Certificate →</a>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🏅</div>
+                        <div class="achievement-content">
+                            <h4>TCS CodeVita — Top 0.14% Globally</h4>
+                            <p>Round 1: Rank 212 / 1.5 lakh+ · Round 2: Rank 845 / 6000+ participants</p>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">💻</div>
+                        <div class="achievement-content">
+                            <h4>2000+ DSA Problems Solved</h4>
+                            <p>Across LeetCode, Codeforces, CodeChef, and HackerRank. CodeChef 4★, Codeforces
+                                Specialist.</p>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🥈</div>
+                        <div class="achievement-content">
+                            <h4>Rank 4 — Bridge The Gap Diversity Hackathon</h4>
+                            <p>Competed in a national-level hackathon focused on diversity and inclusion in tech.</p>
+                            <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/rank4bridgethegap.pdf"
+                                target="_blank" rel="noopener noreferrer">View Certificate →</a>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🚀</div>
+                        <div class="achievement-content">
+                            <h4>Finalist — Amdocs GenAI Hackathon 2024–25</h4>
+                            <p>Selected as a finalist in the Amdocs Graduate GenAI Hackathon for innovative AI
+                                solutions.</p>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">⭐</div>
+                        <div class="achievement-content">
+                            <h4>Star Award — CYFIRMA (2x)</h4>
+                            <p>Recognized twice for outstanding performance and contributions to the engineering team.
+                            </p>
+                            <a href="https://drive.google.com/file/d/1GDXjvjqBv2wzXemWPM6tFSojnA0vA7XC/view"
+                                target="_blank" rel="noopener noreferrer">View Certificate →</a>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🎯</div>
+                        <div class="achievement-content">
+                            <h4>Hacktoberfest 2023 Winner</h4>
+                            <p>Successfully merged 11 Pull Requests to open-source projects during Hacktoberfest.</p>
+                            <a href="https://portfolio2himansupathak.vercel.app/assets/hac1.png" target="_blank"
+                                rel="noopener noreferrer">View Profile →</a>
+                        </div>
+                    </article>
+                    <article class="achievement-card glass-card reveal">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-content">
+                            <h4>Rank 10 — Codathon Contest</h4>
+                            <p>Secured top 10 position in a competitive programming contest.</p>
+                            <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/rank10.pdf"
+                                target="_blank" rel="noopener noreferrer">View Certificate →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ WHY HIRE ME ═══════ -->
+        <section class="section section-alt" id="why-hire">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center;">
+                    <span class="section-label" style="justify-content: center;">Why Hire Me</span>
+                    <h2 class="section-title">What Sets Me <span class="gradient-text">Apart</span></h2>
+                    <p class="section-subtitle" style="margin: 0 auto;">Not just a coder — an engineer who ships
+                        impactful, production-ready software.</p>
+                </div>
+                <div class="hire-grid">
+                    <article class="hire-card glass-card reveal">
+                        <span class="hire-icon">🐍</span>
+                        <h3>Python Expert</h3>
+                        <p>Django, FastAPI, Flask — I build robust Python backends. Expert in async task processing with
+                            Celery, Redis caching, and PostgreSQL optimization.</p>
+                    </article>
+                    <article class="hire-card glass-card reveal">
+                        <span class="hire-icon">☕</span>
+                        <h3>Java Knowledge</h3>
+                        <p>Experienced with Java/Spring Boot for enterprise systems. Understands both Python and JVM
+                            ecosystems for versatile backend development.</p>
+                    </article>
+                    <article class="hire-card glass-card reveal">
+                        <span class="hire-icon">📈</span>
+                        <h3>Full-Stack Builder</h3>
+                        <p>From Django APIs to Angular frontends — I own the entire stack. 50K+ daily API requests, 90%
+                            automation savings, and 40% latency reduction.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ TERMINAL ═══════ -->
+        <section class="section" id="terminal">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center;">
+                    <span class="section-label" style="justify-content: center;">For Developers</span>
+                    <h2 class="section-title">The <span class="gradient-text">Terminal</span> View</h2>
+                </div>
+                <div class="terminal-window reveal">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">himanshu@portfolio ~ %</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$ </span>
+                            <span class="terminal-command">cat about.json</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            {
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"name"</span>: <span class="terminal-value">"Himanshu
+                                Pathak"</span>,
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"role"</span>: <span class="terminal-value">"Python
+                                Developer"</span>,
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"company"</span>: <span
+                                class="terminal-value">"CYFIRMA"</span>,
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"stack"</span>: <span
+                                class="terminal-value">["Python", "Django", "FastAPI", "PostgreSQL", "Redis", "Celery",
+                                "Java"]</span>,
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"dsa_solved"</span>: <span
+                                class="terminal-value">2000</span>,
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            &nbsp;&nbsp;<span class="terminal-key">"open_to"</span>: <span
+                                class="terminal-value">"Python / Django / Backend roles"</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            }
+                        </div>
+                        <div class="terminal-line" style="margin-top: 8px;">
+                            <span class="terminal-prompt">$ </span>
+                            <span class="terminal-command">echo $STATUS</span>
+                        </div>
+                        <div class="terminal-line terminal-output">
+                            <span class="terminal-value">🟢 Available for opportunities</span>
+                        </div>
+                        <div class="terminal-line" style="margin-top: 8px;">
+                            <span class="terminal-prompt">$ </span>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ NOW ═══════ -->
+        <section class="section section-alt" id="now">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center;">
+                    <span class="section-label" style="justify-content: center;">Now</span>
+                    <h2 class="section-title">What I'm <span class="gradient-text">Working On</span></h2>
+                    <p class="section-subtitle" style="margin: 0 auto;">A snapshot of my current focus areas — updated
+                        March 2026.</p>
+                </div>
+                <div class="now-content">
+                    <article class="now-item glass-card reveal">
+                        <div class="now-icon">🐍</div>
+                        <div class="now-text">
+                            <h4>Python Backend at CYFIRMA</h4>
+                            <p>Building Django/FastAPI APIs for threat intelligence, attack surface monitoring, and
+                                ransomware detection modules.</p>
+                        </div>
+                    </article>
+                    <article class="now-item glass-card reveal">
+                        <div class="now-icon">🤖</div>
+                        <div class="now-text">
+                            <h4>Expanding InterviewPrepHub</h4>
+                            <p>Adding more features to the Django backend, optimizing Celery tasks, and improving Redis
+                                caching strategies.</p>
+                        </div>
+                    </article>
+                    <article class="now-item glass-card reveal">
+                        <div class="now-icon">📚</div>
+                        <div class="now-text">
+                            <h4>Deep-Diving into System Design</h4>
+                            <p>Studying distributed systems, microservices patterns, and scalability techniques for
+                                Python applications.</p>
+                        </div>
+                    </article>
+                    <article class="now-item glass-card reveal">
+                        <div class="now-icon">💡</div>
+                        <div class="now-text">
+                            <h4>Competitive Programming</h4>
+                            <p>Continuing to solve DSA problems daily on LeetCode and Codeforces, targeting Expert
+                                rating.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/himanshu-pathak-997720201/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/pathakvishal132/" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://leetcode.com/u/pathakvishal132/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LeetCode">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                            alt="LeetCode" width="18" height="18" loading="lazy">
+                    </a>
+                    <a href="https://interview-prep-hub-frontend-gamma.vercel.app/" target="_blank"
+                        rel="noopener noreferrer" aria-label="InterviewPrepHub">
+                        <i class='bx bx-link-external'></i>
+                    </a>
+                </div>
+                <div class="footer-contact-info">
+                    <a href="mailto:pathakvishal132@gmail.com">
+                        <i class='bx bx-envelope'></i> pathakvishal132@gmail.com
+                    </a>
+                    <a href="tel:+917727872538">
+                        <i class='bx bx-phone'></i> +91 7727872538
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Himanshu Pathak. Built with Python.</p>
+                <a href="#home" class="back-to-top" aria-label="Back to top">
+                    <i class='bx bx-up-arrow-alt'></i>
                 </a>
             </div>
         </div>
-
-        <div class="my-img right">
-            <img src="./assets/Mypic.png" alt="">
-        </div>
-
-    </section>
-
-    <!-- about section design -->
-    <section class="about" id="about">
-
-        <div class="about-img left">
-            <img src="./assets/IIT_Madras_Logo.svg.png" alt="" class="about-img-2">
-            <span class="circle-spin"></span>
-        </div>
-
-        <div class="about-details right">
-            <h2 class="heading">About <span>Me</span></h2>
-            <div class="about-content">
-                <h3><span>Full-Stack</span> Developer</h3>
-
-                <p>
-                    Greetings! I am a passionate Software Developer. With hands-on experience at CYFIRMA and IBM, I have
-                    contributed
-                    to scalable web applications, optimized APIs, and enhanced UI components for seamless user
-                    experiences.
-                </p>
-
-                <p>
-                    I have a strong problem-solving background and have solved 2000+ DSA problems across various coding
-                    platforms.
-                </p>
-
-                <p>
-                    I built InterviewPrepHub, an AI-powered interview preparation platform covering multiple engineering
-                    domains,
-                    providing real-time feedback and company-specific question sets.
-                </p>
-                <p>
-                    My technical stack spans across both programming languages and modern development frameworks.
-                </p>
-
-                <p>
-                    <strong>Languages:</strong> Java, Python, JavaScript, TypeScript.
-                </p>
-
-                <p>
-                    <strong>Frameworks & Tools:</strong> Django, Angular, FastAPI, and REST API
-                    development.
-                </p>
-
-                <p>
-                    I am passionate about Data Structures, Algorithms, and Full-Stack Development, consistently working
-                    on optimizing
-                    performance and enhancing user engagement.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section>
-        <div class="education-column right" id="experience">
-            <h2 class="heading"><span>Experience</span></h2>
-            <div class="education-box">
-
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i>Feb, 2024 - Present</div>
-                        <h3>Software Developer — CYFIRMA</h3>
-
-                        <ul>
-                            <!-- Python Backend Contributions -->
-                            <li>Designed, developed, and optimized scalable REST APIs using Django and FastAPI,
-                                improving backend performance, maintainability, and long-term extensibility.</li>
-                            <li>Built data-heavy analytics and dashboard APIs in Django with advanced time-based
-                                aggregations, conditional filters, and role-based access control.</li>
-                            <li>Implemented high-performance backend services integrating Redis caching, Celery-based
-                                asynchronous task processing, and optimized database queries using PostgreSQL.</li>
-                            <li>Integrated AWS S3 for secure file uploads and scalable storage, supporting high-volume
-                                data ingestion pipelines.</li>
-
-                            <!-- Python Automation & AI Contributions -->
-                            <li>Developed Python automation pipelines to detect hate speech on YouTube by extracting
-                                transcripts and comments and applying NLP-based classification models, reducing manual
-                                moderation efforts by 90%.</li>
-                            <li>Created Python-based computer vision pipelines using OpenCV to detect impersonated
-                                Facebook profiles through image similarity and facial feature analysis, reducing manual
-                                investigation efforts by 60%.</li>
-                            <li>Built automated monitoring systems to detect impersonated mobile applications on Google
-                                Play Store and Apple App Store using text similarity algorithms and perceptual image
-                                hashing.</li>
-
-                            <!-- Frontend & Full-Stack Contributions -->
-                            <li>Refactored and delivered 40+ reusable Angular components using TypeScript, HTML, and
-                                CSS, improving UI consistency and maintainability.</li>
-                            <li>Revamped 10+ frontend pages to enhance user experience, accessibility, and rendering
-                                performance.</li>
-                            <li>Developed and integrated real-time dashboards and reporting workflows by consuming
-                                Django APIs in Angular-based frontend applications.</li>
-                            <li>Implemented optimized search and filtering workflows across frontend and backend,
-                                reducing query execution time by 25% and improving data export performance.</li>
-                        </ul>
-
-                    </div>
-                </div>
-
-
-                <div class="education-content">
-                    <div class="content">
-                        <div class="year"><i class="bx bxs-calendar"></i>Sep, 2022 - Nov, 2022</div>
-                        <h3>Software Development Intern - IBM</h3>
-                        <p>
-                            <ul>
-                                <li>Engineered optimized database schemas and relationships, enhancing query efficiency
-                                    and improving data retrieval speed by over 40%.</li>
-                                <li>Implemented a secure user and admin authentication system integrated with a
-                                    real-time
-                                    payment gateway, ensuring robust transaction validation and reducing processing
-                                    errors by 60%.</li>
-                                <li>Collaborated with cross-functional teams to debug and refine backend workflows,
-                                    resulting in a 25% improvement in system stability and scalability.</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- education section design -->
-    <section class="education" id="education">
-        <div class="education-row">
-            <div class="education-column left">
-                <h2 class="heading">Education</h2>
-                <div class="education-box">
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2020 - 2024</div>
-                            <h3>Bachelor of Technology in Computer Science & Engineering - Shri Mata Vaishno Devi
-                                University</h3>
-                            <!-- <p>CGPA - 7.94</p> -->
-                            <p>Relevant Courses: Data Structures & Algorithms, Database Management Systems, Operating
-                                Systems, Machine Learning, Artificial Intelligence, Software Engineering</p>
-                        </div>
-                    </div>
-
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class="bx bxs-calendar"></i>2022 - 2024</div>
-                            <h3>BS in Programming - IIT Madras</h3>
-                            <!-- <p>CGPA - 7.5</p> -->
-                            <p>Relevant Courses: Java , Python , Web Development, SQL,
-                                Object-Oriented Programming</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="tech-stack" class="tech-stack">
-        <h2 class="heading">Tech Stack</h2>
-        <div class="tech-categories">
-
-            <div class="tech-category">
-                <h3>Languages and Databases</h3>
-                <ul>
-                    <li>Java, Python, Typescript , JavaScript, HTML, CSS</li>
-                    <li>SQL, MongoDB, SQLite, NoSQL</li>
-                </ul>
-            </div>
-
-            <div class="tech-category">
-                <h3>Frameworks and Libraries</h3>
-                <ul>
-                    <li>Django, Angular , Spring Boot</li>
-                    <!-- <li>SQL,SQLAlchemy,MySQL,NoSQL,Postgress-sql,MongoDb</li> -->
-                </ul>
-            </div>
-            <div class="tech-category">
-                <h3>Areas of Interest</h3>
-                <ul>
-                    <li>Full-Stack Development,Data-Structure and algo</li>
-                    <li>Problem-Solving</li>
-                </ul>
-            </div>
-            <div class="tech-category">
-                <h3>Tools & Cloud Services</h3>
-                <ul>
-                    <li>Git, Redis , kafka </li>
-                    <li>AWS</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- portfolio section design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading top">Latest <span>Projects</span></h2>
-        <div class="portfolio-container bottom">
-            <div class="portfolio-box">
-                <img src="./assets/logo.jpg" alt="AI Shakespeare NLP Driven Text Generation">
-                <div class="portfolio-layer">
-                    <h4>InterviewPrepHub</h4>
-                    <p>InterviewPrepHub is a live all-in-one AI powered AI powered interview preparation platform
-                        tailored for various
-                        engineering domains such as Computer Science, Mechanical, Electrical, Civil, and more. Based on
-                        the selected subdomain (e.g., Web Development), it
-                        asks domain relevant questions of varying difficulty levels. Users can answer either vocally or
-                        by writing, and receive real-time
-                        feedback along with the correct answers.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/pathakvishal132/InterviewPrepHub-Backend" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                        <a href="https://github.com/pathakvishal132/InterviewPrepHub-Frontend" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                        <a href="https://interview-prep-hub-frontend-gamma.vercel.app/" target="_blank">
-                            <i class='bx bx-link-external'></i>
-                        </a>
-                        <a href="#" class="more-details" onclick="openModal()">
-                            <i class='bx bx-info-circle'></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="./assets/GMS.webp" alt="Grocery Management Store">
-                <div class="portfolio-layer">
-                    <h4>Grocery Management Store</h4>
-                    <p>Grocery Store is a comprehensive platform that allows users to easily purchase products, while
-                        providing managers with efficient tools to manage inventory, categories, and pricing. It
-                        streamlines the shopping experience for
-                        customers and simplifies product management for store administrators.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/pathakvishal132/Mad2ProjectIITM" target="_blank"><i
-                                class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add any additional projects similarly -->
-        </div>
-        <div id="projectModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>InterviewPrepHub - AI-Driven Interview Preparation</h2>
-                <p>
-                    <strong>InterviewPrepHub</strong> is an AI-powered platform designed to revolutionize interview
-                    preparation
-                    by
-                    offering personalized, domain-specific, and company-specific mock interviews. It aims to bridge the
-                    gap
-                    between
-                    theoretical learning and real-world interview experiences by providing instant feedback and
-                    structured
-                    learning
-                    resources.
-                </p>
-
-                <h3>Key Features:</h3>
-                <ul>
-                    <li><strong>AI-Generated Questions:</strong> Dynamic question generation based on domain, subdomain,
-                        and
-                        difficulty level.</li>
-                    <li><strong>Company-Specific Questions:</strong> Access previously asked interview questions
-                        categorized
-                        by
-                        experience level and job profile.</li>
-                    <li><strong>Real-Time Feedback:</strong> Get instant AI-generated feedback on text and voice
-                        responses,
-                        along with actual answers.</li>
-                    <li><strong>Search & Filter:</strong> Quickly search for specific companies and start targeted
-                        preparation.
-                    </li>
-                    <li><strong>Community Reviews:</strong> Read and write reviews about interview experiences at
-                        different
-                        companies.</li>
-                    <li><strong>User Profile & Progress Tracking:</strong> Maintain a personalized profile to track
-                        achievements
-                        and performance over time.</li>
-                </ul>
-
-                <h3>Future Enhancements:</h3>
-                <ul>
-                    <li>Gamification with leaderboards, badges, and rewards.</li>
-                    <li>Expanded dataset for more refined and adaptive learning.</li>
-                    <li>AI-driven insights for personalized recommendations and learning paths.</li>
-                    <li>Integration with hiring managers, educators, and industry experts.</li>
-                </ul>
-
-                <p><strong>Tech Stack:</strong> Angular, Django, Python, OpenAI API, PostgreSQL</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- achievements section design -->
-    <section class="education" id="achievements">
-        <div class="education-row">
-            <div class="education-column left">
-                <h2 class="heading">Achievements</h2>
-
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <ul>
-                                <li>
-                                    🥇 <strong>Rank 1</strong> in <strong>Python CodeChef Contest</strong> conducted by
-                                    <strong>IIT Madras</strong>
-                                    —
-                                    <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/iitm.png"
-                                        target="_blank">View Certificate</a>
-                                </li>
-
-                                <li>
-                                    🏅 <strong>TCS CodeVita Season</strong>:
-                                    <ul>
-                                        <li>Round 1: <strong>Rank 212</strong> among <strong>1.5 lakh+</strong>
-                                            participants</li>
-                                        <li>Round 2: <strong>Rank 845</strong> among <strong>6000+</strong> participants
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    💻 Solved <strong>1500+ DSA problems</strong> across
-                                    <strong>LeetCode, Codeforces, CodeChef, and HackerRank</strong>
-                                </li>
-
-                                <li>
-                                    🥈 <strong>Rank 4</strong> in <strong>Bridge The Gap – Diversity Hackathon</strong>
-                                    —
-                                    <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/rank4bridgethegap.pdf"
-                                        target="_blank">View Certificate</a>
-                                </li>
-
-                                <li>
-                                    ⭐ <strong>CodeChef:</strong> Max <strong>4★</strong> rating &
-                                    <strong>Codeforces:</strong> Max <strong>Specialist</strong>
-                                </li>
-
-                                <li>
-                                    🏆 <strong>Rank 10</strong> in <strong>Codathon Contest</strong>
-                                    —
-                                    <a href="https://portfolio2himansupathak.vercel.app/assets/certificate/rank10.pdf"
-                                        target="_blank">View Certificate</a>
-                                </li>
-
-                                <li>
-                                    🌟 Won <strong>Star Award</strong> twice for outstanding performance
-                                    —
-                                    <a href="https://drive.google.com/file/d/1GDXjvjqBv2wzXemWPM6tFSojnA0vA7XC/view"
-                                        target="_blank">View Certificate</a>
-                                </li>
-
-                                <li>
-                                    🎯 <strong>HacktoberFest 2023 Winner</strong> with
-                                    <strong>11 merged Pull Requests</strong>
-                                    —
-                                    <a href="https://portfolio2himansupathak.vercel.app/assets/hac1.png"
-                                        target="_blank">View Profile</a>
-                                </li>
-
-                                <li>
-                                    🚀 <strong>Finalist</strong> at <strong>Amdocs GenAI Graduate Hackathon
-                                        2024–2025</strong>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- footer design -->
-    <footer class="footer" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem;">
-        <div class="btn-box">
-
-            <a href="https://www.linkedin.com/in/pathakvishal132" target="_blank">
-                <i class="bx bxl-linkedin"></i>
-            </a>
-            <a href="https://github.com/pathakvishal132" target="_blank">
-                <i class="bx bxl-github"></i>
-            </a>
-            <a href="https://leetcode.com/u/pathakvishal132/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"
-                    width="24" height="24">
-            </a>
-            <a href="https://interview-prep-hub-frontend-gamma.vercel.app/" target="_blank" alt="InterviewPrepHub">
-                <i class='bx bx-link-external'></i>
-            </a>
-            <div class="footer-contact">
-                <p>
-                    <i class='bx bx-envelope'></i>
-                    <a href="mailto:pathakvishal132@gmail.com">pathakvishal132@gmail.com</a>
-                </p>
-                <p>
-                    <i class='bx bx-phone'></i>
-                    <a href="tel:+917727872538">7727872538</a>
-                </p>
-            </div>
-        </div>
-        <div>
-            <!-- <p>Copyright &copy; 2025 by Kabir | All Rights Reserved.</p> -->
-            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-        </div>
     </footer>
-    <script src="main.js"></script>
+
+    <!-- ═══════ CHATBOT WIDGET ═══════ -->
+    <div class="sticky-cta" id="sticky-cta">
+        <a href="mailto:pathakvishal132@gmail.com">
+            <i class='bx bx-envelope'></i> Contact Me
+        </a>
+    </div>
+
+    <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Ask about Himanshu">
+        <i class='bx bx-message-dots'></i>
+    </button>
+
+    <div class="chatbot-panel" id="chatbot-panel">
+        <div class="chatbot-header">
+            <h4><i class='bx bx-bot'></i> Ask about Himanshu</h4>
+            <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chat-message bot">
+                Hey! 👋 I'm Himanshu's AI assistant. Ask me anything about his Python skills, Django experience, or
+                projects!
+            </div>
+        </div>
+        <div class="chatbot-suggestions" id="chatbot-suggestions">
+            <button onclick="askChatbot('What is his tech stack?')">Tech Stack</button>
+            <button onclick="askChatbot('Tell me about his Python experience')">Python/Django</button>
+            <button onclick="askChatbot('What projects has he built?')">Projects</button>
+            <button onclick="askChatbot('Why should I hire him?')">Why Hire</button>
+            <button onclick="askChatbot('What are his achievements?')">Achievements</button>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Type your question..."
+                onkeypress="if(event.key==='Enter')sendChatMessage()">
+            <button onclick="sendChatMessage()" aria-label="Send message">
+                <i class='bx bx-send'></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════ PROJECT MODAL ═══════ -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                <i class='bx bx-x'></i>
+            </button>
+            <h2 id="modal-title">Project Details</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
